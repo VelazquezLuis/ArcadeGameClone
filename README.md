@@ -4,7 +4,7 @@ frontend-nanodegree-arcade-game
 ## Objective of game
 You are a Hero trying to make your way across the road evading enemies at all cost. Do not let any enemies touch you. 
 ## instructions 
-using your keyboard arrows move your hero to the last road. contact with an enemy will restart the game. To play, click on the link: good luck!
+using your keyboard arrows move your hero to the last road. contact with an enemy will restart the game. To play, click on the link: https://velazquezluis.github.io/ArcadeGameClone/ good luck!
 ## Contributing
 Most of the code and start up files was provided by Udacity. most work was done in the app.js  with the help of walk throughs webinars and udacity resources, this game was able to function properly. 
 ## Dependencies 
