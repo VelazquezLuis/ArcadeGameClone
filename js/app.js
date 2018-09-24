@@ -1,4 +1,4 @@
-
+'use strict';
 // GETS THE ELEMENT SPAN
 const gameScore = document.getElementById('gameScore');
 //SETS THE INITIAL TEXT CONTENT OF SPAN TO 0
@@ -74,12 +74,12 @@ class Hero {
   // checks if the enemys collides with hero and manages points.
   update() {
     for( let enemy of allEnemies) {
-      if (this.y === enemy.y && (enemy.x + enemy.slide/2 > this.x
+      if (this.y === enemy.y && (enemy.x + (enemy.slide - 25) > this.x
         && enemy.x < this.x + this.slide/2) ){
-        this.reset();
-        if (this.point > 0){
-        this.point --;
-        gameScore.innerHTML = this.point;
+          this.reset();
+          if (this.point > 0){
+          this.point --;
+          gameScore.innerHTML = this.point;
         }
       }
     }
@@ -88,7 +88,7 @@ class Hero {
       this.point ++;
       gameScore.innerHTML = this.point;
       if(this.point === 3 ){
-        alert("you Win!!")
+        alert('you Win!!')
       }
       this.reset();
     }
@@ -101,12 +101,12 @@ class Hero {
 }
 // creates new instances of hero and enemies.
 const player = new Hero();
-const bug1 = new Enemy(-100,0, 120);
-const bug2 = new Enemy(-100,83,300);
-const bug3 = new Enemy(-250,83,100);
-const bug4 = new Enemy(-100,166,200);
-const allEnemies = [];
-allEnemies.push(bug1,bug2,bug3,bug4);
+
+const allEnemies = [new Enemy(-100,0, 120),
+  new Enemy(-100,83,300),
+  new Enemy(-250,83,100),
+  new Enemy(-100,166,200)];
+
 console.log(allEnemies);
 
 // This listens for key presses and sends the keys to your
