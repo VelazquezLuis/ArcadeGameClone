@@ -74,7 +74,7 @@ class Hero {
   // checks if the enemys collides with hero and manages points.
   update() {
     for( let enemy of allEnemies) {
-      if (this.y === enemy.y && (enemy.x + (enemy.slide - 25) > this.x
+      if (this.y === enemy.y && (enemy.x + (enemy.slide - 20) > this.x
         && enemy.x < this.x + this.slide/2) ){
           this.reset();
           if (this.point > 0){
